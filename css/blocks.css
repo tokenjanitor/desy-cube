@@ -1,0 +1,52 @@
+.cube-card {
+  padding: var(--cube-card-padding, var(--cube-space-md));
+  border: var(--cube-card-border-width) solid var(--desy-color-border);
+  border-radius: var(--cube-card-radius);
+  background: var(--desy-color-background);
+  color: var(--desy-color-text);
+}
+
+.cube-card[data-variant="accent"] {
+  border-color: var(--desy-color-accent);
+}
+
+.cube-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--cube-button-gap);
+  min-inline-size: 0;
+  max-inline-size: 100%;
+  min-block-size: var(--cube-button-min-height);
+  padding: var(--cube-button-padding);
+  border: var(--cube-button-border-width) solid var(--desy-color-accent);
+  border-radius: var(--cube-button-radius);
+  background: var(--desy-color-accent);
+  color: var(--desy-color-background);
+  font: inherit;
+  font-weight: var(--cube-button-weight);
+  line-height: var(--cube-button-line-height);
+  text-align: center;
+  text-decoration: none;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+}
+
+.cube-button[data-variant="outline"] {
+  background: transparent;
+  color: var(--desy-color-accent);
+}
+
+.cube-button:hover:not(:disabled) {
+  border-color: var(--desy-color-text);
+  background: var(--desy-color-text);
+  color: var(--desy-color-background);
+}
+
+.cube-button:disabled {
+  border-color: var(--desy-color-border);
+  background: var(--cube-button-disabled-background);
+  color: var(--desy-color-muted);
+  cursor: not-allowed;
+}

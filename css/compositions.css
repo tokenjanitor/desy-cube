@@ -1,0 +1,31 @@
+.cube-wrapper {
+  inline-size: min(var(--cube-wrapper-max, 70rem), calc(100% - 2 * var(--cube-gutter)));
+  margin-inline: auto;
+}
+
+/* The following child reads the interval, allowing local sibling exceptions. */
+.cube-flow > * + * {
+  margin-block-start: var(--cube-flow-space, var(--cube-space-md));
+}
+
+.cube-cluster {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--cube-cluster-gap, var(--cube-space-sm));
+}
+
+.cube-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--cube-grid-min, 18rem)), 1fr));
+  gap: var(--cube-grid-gap, var(--cube-space-md));
+}
+
+/* Allow long content to shrink within a layout item instead of widening the page. */
+:where(.cube-cluster, .cube-grid) > * {
+  /* Gap owns these relationships, including semantic list items. */
+  margin-block: 0;
+  min-inline-size: 0;
+  max-inline-size: 100%;
+}
+

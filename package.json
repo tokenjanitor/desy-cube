@@ -1,0 +1,23 @@
+{
+  "name": "desy-cube",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "A native CSS foundation based on CUBE CSS.",
+  "engines": {
+    "node": ">=24.12.0 <25"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "dev": "npm run typecheck && node scripts/serve.ts",
+    "test": "npm run test:transfer && playwright test",
+    "test:transfer": "npm run typecheck && node --test tests/cli/*.test.ts",
+    "test:chromium": "npm run typecheck && playwright test --project=chromium",
+    "sync:prose-theme": "npm run typecheck && node scripts/sync-prose-theme.ts"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.57.0",
+    "@types/node": "24.10.4",
+    "typescript": "5.9.3"
+  }
+}

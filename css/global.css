@@ -1,0 +1,129 @@
+html {
+  color-scheme: light;
+}
+
+body {
+  min-block-size: 100vh;
+  background: var(--desy-color-background);
+  color: var(--desy-color-text);
+  font-family: var(--desy-font-sans);
+  font-size: var(--cube-text-size);
+  line-height: var(--cube-text-line-height);
+  overflow-wrap: anywhere;
+}
+
+:where(h1, h2, h3, h4, h5, h6) {
+  font-weight: var(--cube-heading-weight);
+  line-height: var(--cube-heading-line-height);
+}
+
+h1 {
+  font-size: var(--cube-h1-size);
+  letter-spacing: var(--cube-h1-tracking);
+}
+
+h2 {
+  font-size: var(--cube-h2-size);
+  letter-spacing: var(--cube-h2-tracking);
+}
+
+h3 {
+  font-size: var(--cube-h3-size);
+}
+
+h4 {
+  font-size: var(--cube-h4-size);
+}
+
+h5 {
+  font-size: var(--cube-h5-size);
+}
+
+h6 {
+  font-size: var(--cube-h6-size);
+}
+
+:where(a) {
+  color: var(--desy-color-accent);
+  text-decoration-thickness: var(--cube-link-underline-width);
+  text-underline-offset: var(--cube-link-underline-offset);
+}
+
+:where(a:hover) {
+  text-decoration-thickness: var(--cube-link-underline-hover-width);
+}
+
+:where(:focus-visible) {
+  outline: var(--cube-focus-width) solid var(--desy-color-focus);
+  outline-offset: var(--cube-focus-offset);
+}
+
+:where([id]) {
+  scroll-margin-block-start: var(--cube-scroll-offset);
+}
+
+:where(ul, ol) {
+  padding-inline-start: var(--cube-list-indent);
+}
+
+:where(li + li, dt + dd) {
+  margin-block-start: var(--cube-list-space);
+}
+
+dt {
+  font-weight: var(--cube-definition-weight);
+}
+
+:where(strong, b) {
+  font-weight: var(--cube-strong-weight);
+}
+
+:where(code, pre, kbd, samp) {
+  font-family: var(--desy-font-mono);
+  font-size: var(--cube-code-size);
+}
+
+:where(code, kbd, samp) {
+  background: var(--desy-color-code-background);
+  padding: var(--cube-code-padding);
+}
+
+pre {
+  max-inline-size: 100%;
+  overflow-x: auto;
+  padding: var(--cube-pre-padding);
+  background: var(--desy-color-code-background);
+  white-space: pre;
+  overflow-wrap: normal;
+}
+
+:where(pre code, pre kbd, pre samp) {
+  padding: 0;
+  font-size: inherit;
+}
+
+blockquote {
+  margin-inline: 0;
+  padding-inline-start: var(--cube-quote-padding);
+  border-inline-start: var(--cube-quote-rule-width) solid var(--desy-color-accent);
+}
+
+:where(small) {
+  font-size: var(--cube-small-size);
+}
+
+:where(hr) {
+  margin-block: var(--cube-space-lg);
+  border: 0;
+  border-block-start: var(--cube-rule-width) solid var(--desy-color-border);
+}
+
+:where(summary) {
+  cursor: pointer;
+  font-weight: var(--cube-summary-weight);
+}
+
+:where(details[open] > summary) {
+  margin-block-end: var(--cube-space-sm);
+}
+

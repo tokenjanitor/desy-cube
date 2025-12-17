@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cards and actions — Desy</title>
+  <link rel="stylesheet" href="../css/cube.css">
+</head>
+<body>
+  <main class="cube-wrapper cube-flow" style="padding-block: var(--example-page-padding, 3rem)">
+    <header class="cube-flow">
+      <h1>Room for different ideas.</h1>
+      <p>Three small places to start exploring. Each card has its own content; the layout responds to the space available.</p>
+      <nav class="cube-cluster" aria-label="Example navigation">
+        <a class="cube-button" href="index.html#components">Back to the laboratory</a>
+        <a class="cube-button" data-variant="outline" href="standalone.html">See the minimal page</a>
+      </nav>
+    </header>
+
+    <section aria-label="Places to explore">
+      <div id="card-grid" class="cube-grid">
+        <article id="field-notes" class="cube-card cube-flow" data-variant="accent">
+          <h2>Field notes</h2>
+          <p>Notice the small things. A heading that wraps well, a useful gap, a link that is easy to find.</p>
+          <p><a href="#preferences">Choose a subject</a></p>
+        </article>
+        <article id="reading-room" class="cube-card cube-flow">
+          <h2>Reading room</h2>
+          <p>A longer thought deserves a little more room. The card remains an ordinary article, with its own heading, paragraphs and links.</p>
+          <p>Its appearance works equally well on its own or inside a composition.</p>
+          <p><a href="index.html#type">Explore the type specimens</a></p>
+        </article>
+        <article id="workshop" class="cube-card cube-flow">
+          <h2>Workshop</h2>
+          <p lang="de">Auch Grundstücksverkehrsgenehmigungszuständigkeitsübertragungsverordnung passt in eine schmale Karte.</p>
+          <p><a href="index.html#narrow-layout">Inspect the narrow layout</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="preferences" class="cube-flow" aria-labelledby="preferences-title">
+      <h2 id="preferences-title">Choose a starting point.</h2>
+      <form class="cube-flow" aria-label="Subject preference">
+        <div>
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject">
+            <option value="layout">Layout</option>
+            <option value="type">Typography</option>
+            <option value="color">Color</option>
+          </select>
+        </div>
+        <div id="action-group" class="cube-cluster">
+          <button class="cube-button" type="reset">Reset selection</button>
+          <a class="cube-button" data-variant="outline" href="#card-grid">Return to the cards</a>
+          <button class="cube-button" type="button" disabled>Unavailable action</button>
+        </div>
+        <p><small>The reset button uses native form behavior. Links navigate, and the disabled action remains unavailable.</small></p>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,58 @@
+.project-header,
+.project-footer {
+  justify-content: space-between;
+  padding-block: var(--cube-space-lg);
+}
+
+.project-brand {
+  color: var(--desy-color-text);
+  font-size: var(--project-brand-size, 1.375rem);
+  font-weight: var(--project-brand-weight, 700);
+  text-decoration: none;
+}
+
+.project-intro {
+  padding-block: var(--project-intro-padding, clamp(2rem, 6vw, 6rem));
+}
+
+.project-intro h1 {
+  max-inline-size: var(--project-heading-measure, 18ch);
+}
+
+.project-lead {
+  max-inline-size: var(--project-lead-measure, 48ch);
+  font-size: var(--project-lead-size, clamp(1.25rem, 1rem + 1vw, 1.75rem));
+  line-height: var(--project-lead-line-height, 1.45);
+}
+
+.project-section {
+  padding-block: var(--cube-space-lg) var(--cube-space-xl);
+}
+
+.project-section > header {
+  max-inline-size: var(--project-section-heading-measure, 60ch);
+  margin-block-end: var(--cube-space-lg);
+}
+
+.project-note {
+  max-inline-size: var(--project-note-measure, 65ch);
+}
+
+.project-footer {
+  border-block-start: var(--project-rule-width, 1px) solid var(--desy-color-border);
+  font-size: var(--project-footer-size, 1rem);
+}
+
+.project-skip {
+  position: absolute;
+  inset-block-start: var(--project-skip-offset, 0.5rem);
+  inset-inline-start: var(--project-skip-offset, 0.5rem);
+  z-index: var(--project-skip-layer, 1);
+  padding: var(--project-skip-padding, 0.75rem 1rem);
+  background: var(--desy-color-background);
+  transform: translateY(var(--project-skip-hidden-offset, -200%));
+}
+
+.project-skip:focus {
+  transform: none;
+}

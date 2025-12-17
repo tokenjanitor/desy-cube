@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Desy — CSS foundations</title>
+  <link rel="stylesheet" href="../css/cube.css">
+  <link rel="stylesheet" href="lab.css">
+</head>
+<body>
+  <a class="lab-skip" href="#content">Skip to content</a>
+  <header class="lab-header cube-wrapper">
+    <a class="lab-name" href="./">Desy</a>
+    <nav aria-label="Laboratory">
+      <a href="#type">Typography</a>
+      <a href="#flow">Content flow</a>
+      <a href="#components">Layouts and actions</a>
+      <a href="#palette">Color</a>
+      <a href="standalone.html">Standalone example</a>
+      <a href="project.html">Complete page</a>
+    </nav>
+  </header>
+  <main id="content" class="lab-main cube-wrapper cube-flow" tabindex="-1">
+    <header class="lab-intro cube-flow">
+      <h1>A foundation for everyday pages.</h1>
+      <p class="lab-lead">Start with the content. Give it a clear voice, room to breathe, and a rhythm that holds up on a small screen.</p>
+      <p class="lab-note">A working laboratory for a small, native CSS design system.</p>
+    </header>
+
+    <section id="type" class="lab-section cube-flow" aria-labelledby="type-title">
+      <header class="cube-flow">
+        <h2 id="type-title">Three voices, one family.</h2>
+        <p class="lab-note">Local Source fonts, with system fallbacks when a font cannot load.</p>
+      </header>
+      <div class="lab-specimen cube-flow">
+        <h3>Source Sans 3</h3>
+        <p>Clear labels and ordinary sentences. A useful starting point for navigation, headings, and the everyday work of an interface.</p>
+        <p><strong>Bold carries emphasis.</strong> <em>Italic adds a quieter distinction.</em></p>
+      </div>
+      <div class="lab-specimen cube-flow">
+        <h3>Source Serif 4</h3>
+        <div class="lab-reading cube-flow" lang="de">
+          <p>Gute Gestaltung lässt dem Inhalt seinen Raum. Sie führt durch einen Text, ohne sich zwischen die Wörter und ihre Bedeutung zu stellen.</p>
+          <p>Ein <strong>klarer Gedanke</strong>, eine <em>leise Betonung</em> und ein verlässlicher Rhythmus: Auch auf einem schmalen Bildschirm soll sich ein längerer Absatz angenehm lesen lassen.</p>
+          <p>„Größere Zusammenhänge entstehen aus kleinen Entscheidungen.“ ÄÖÜ äöü ß ẞ — 0123456789.</p>
+        </div>
+      </div>
+      <div class="lab-specimen cube-flow">
+        <h3>Source Code Pro</h3>
+        <p class="lab-mono">Readable identifiers: <strong>theme.colors</strong>, <em>font-family</em>, 0123456789.</p>
+        <pre tabindex="0" aria-label="CSS usage example"><code>&lt;main class="cube-wrapper cube-flow"&gt;
+  &lt;h1&gt;A clear starting point&lt;/h1&gt;
+  &lt;p&gt;The content sets the pace.&lt;/p&gt;
+&lt;/main&gt;</code></pre>
+      </div>
+    </section>
+
+    <section id="flow" class="lab-section cube-flow" aria-labelledby="flow-title">
+      <header class="cube-flow">
+        <h2 id="flow-title">Let the content set the pace.</h2>
+        <p class="lab-note">Global element styles, a bounded wrapper, and space between adjacent elements.</p>
+      </header>
+      <p>This paragraph belongs to the surrounding flow. Its spacing comes from the relationship with the heading before it, rather than from a margin attached to every paragraph.</p>
+      <ul>
+        <li>Start with semantic HTML.</li>
+        <li>Set a comfortable boundary around the content.</li>
+        <li>Adjust the rhythm where a new context begins.</li>
+      </ul>
+      <div class="lab-nested cube-flow">
+        <h3>A closer conversation</h3>
+        <p>This nested flow gives its direct children a smaller interval.</p>
+        <p>Changing its rhythm leaves the outer flow intact.</p>
+      </div>
+      <blockquote><p>A small foundation should leave room for the page that comes next.</p></blockquote>
+      <p>Long content needs room to wrap, including <a href="#flow">Donaudampfschifffahrtsgesellschaftskapitänsanwärterinnenausbildungsnachweis</a> and long identifiers such as <code>independent_design_system_foundation_with_local_fonts_and_clear_defaults</code>.</p>
+      <details>
+        <summary>Does this page need JavaScript?</summary>
+        <p>No. Content, navigation, disclosure, CSS imports, and local fonts all work without application JavaScript.</p>
+      </details>
+    </section>
+
+    <section id="components" class="cube-flow lab-components" aria-labelledby="components-title">
+      <header class="lab-section cube-flow">
+        <h2 id="components-title">Give each piece its place.</h2>
+        <p>Cards keep related content together. A grid finds room for them, while an action group wraps when space runs out.</p>
+      </header>
+      <div class="cube-cluster" aria-label="Layout examples">
+        <a class="cube-button" href="cards.html">Explore the card example</a>
+        <a class="cube-button" data-variant="outline" href="#narrow-layout">See a narrow container</a>
+      </div>
+      <div id="lab-card-grid" class="cube-grid">
+        <article class="cube-card cube-flow" data-variant="accent">
+          <h3>Field notes</h3>
+          <p>Small observations from the work of making useful pages.</p>
+          <p><a href="cards.html#field-notes">Read the field notes</a></p>
+        </article>
+        <article class="cube-card cube-flow">
+          <h3>Reading room</h3>
+          <p>A place for longer ideas, careful explanations, and a little more context. Different amounts of content can share the same layout.</p>
+          <p><a href="cards.html#reading-room">Visit the reading room</a></p>
+        </article>
+        <article class="cube-card cube-flow">
+          <h3>Workshop</h3>
+          <p>Try a composition and see how it responds to the space around it.</p>
+          <p><a href="cards.html#workshop">Enter the workshop</a></p>
+        </article>
+      </div>
+      <div id="narrow-layout" class="lab-narrow cube-flow">
+        <h3>The same grid, less room.</h3>
+        <p class="lab-note">This container stays narrow even in a wide browser window.</p>
+        <div id="lab-nested-grid" class="cube-grid">
+          <article class="cube-card cube-flow">
+            <h4>A long label</h4>
+            <p lang="de">Grundstücksverkehrsgenehmigungszuständigkeitsübertragungsverordnung</p>
+            <div class="cube-cluster">
+              <a class="cube-button" href="cards.html">Open the complete example</a>
+              <a class="cube-button" data-variant="outline" href="#components">Return to the wider layout</a>
+            </div>
+          </article>
+          <article class="cube-card cube-flow">
+            <h4>Short content</h4>
+            <p>The composition determines the columns; the card only supplies its appearance.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="palette" class="lab-section cube-flow" aria-labelledby="palette-title">
+      <header class="cube-flow">
+        <h2 id="palette-title">Ink, paper, petrol.</h2>
+        <p>A quiet light palette with a distinct color for links and focus.</p>
+      </header>
+      <ul class="lab-swatches">
+        <li><span class="lab-swatch lab-ink" aria-hidden="true"></span>Ink-blue text</li>
+        <li><span class="lab-swatch lab-paper" aria-hidden="true"></span>Warm offwhite background</li>
+        <li><span class="lab-swatch lab-petrol" aria-hidden="true"></span>Petrol links and focus</li>
+      </ul>
+      <p class="lab-note">Color and font families are shared theme values. Layout sizes and spacing belong to this library.</p>
+      <p><a href="standalone.html">Open the minimal standalone page</a></p>
+    </section>
+  </main>
+  <footer class="lab-footer cube-wrapper">
+    <p>Desy. A small foundation, ready to grow.</p>
+  </footer>
+</body>
+</html>
+
